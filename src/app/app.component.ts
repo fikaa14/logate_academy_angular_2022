@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'academy2022';
+  showParagraph: boolean = false;
+  hasActiveClass: boolean = true;
+
+  constructor() { }
+
+  handleClick(): void {
+    console.log("Clicked!");
+  }
+
+  toggleActiveClass(): void {
+    this.hasActiveClass = !this.hasActiveClass;
+  }
 }
