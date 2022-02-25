@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlaygroundDetailComponent } from './playground-detail/playground-detail.component';
 import { PlaygroundComponent } from './playground/playground.component';
@@ -22,7 +24,9 @@ import { StudentComponent } from './student/student.component';
     StudentListComponent,
     StudentDetailComponent,
     ProgramComponent,
-    PlaygroundDetailComponent
+    PlaygroundDetailComponent,
+    ContactComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
