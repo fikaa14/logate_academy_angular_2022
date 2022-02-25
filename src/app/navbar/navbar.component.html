@@ -12,7 +12,7 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu" [ngClass]="{'is-active': isMobileViewActive}">
-        <div class="navbar-start" *ngFor="let link of links">
+        <div class="navbar-start" *ngFor="let link of links" routerLink="{{ link.path }}">
             <a class="navbar-item">
                 {{ link.name }}
             </a>

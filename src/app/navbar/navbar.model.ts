@@ -1,4 +1,4 @@
 export interface NavbarLink{
-    name: String;
-    path?: String;
+    name: string;
+    path?: string;
 }
