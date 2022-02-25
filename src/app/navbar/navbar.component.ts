@@ -25,6 +25,10 @@ export class NavbarComponent {
         {
             name: "Contact",
             path: "/contact"
+        },
+        {
+            name: "About us",
+            path: "/about-us"
         }
     ];
 
