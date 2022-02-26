@@ -1,0 +1,15 @@
+<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+
+    <tbody *ngFor="let role of roles">
+        <td>{{ role.id }}</td>
+        <td>{{ role.name }}</td>
+        <td>{{ role.description }}</td>
+    </tbody>
+
+</table>

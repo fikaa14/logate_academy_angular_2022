@@ -17,6 +17,7 @@ import { StudentService } from './shared/student.service';
 import { StudentDetailComponent } from './student/detail/student-detail.component';
 import { StudentListComponent } from './student/list/student-list.component';
 import { StudentComponent } from './student/student.component';
+import { RoleComponent } from './admin/roles/role.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { StudentComponent } from './student/student.component';
     ContactComponent,
     AboutUsComponent,
     AdminComponent, 
-    UserPreviewComponent
+    UserPreviewComponent, 
+    RoleComponent
   ],
   imports: [
     BrowserModule,
