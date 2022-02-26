@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserPreviewComponent } from './admin/users/preview/user-preview.component';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,11 +29,14 @@ import { StudentComponent } from './student/student.component';
     ProgramComponent,
     PlaygroundDetailComponent,
     ContactComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AdminComponent, 
+    UserPreviewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [StudentService],

@@ -7,11 +7,16 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class PlaygroundDetailComponent implements OnInit{
 
+    params: any;
+
     constructor(private activatedRoute: ActivatedRoute) {}
 
     ngOnInit(): void {
         const params = this.activatedRoute.snapshot.params;
-        console.log(params);
+        this.params = params;
+        
+        const data = this.activatedRoute.snapshot.data;
+        console.log(data);
         
     }
 }

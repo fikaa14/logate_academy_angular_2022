@@ -8,13 +8,19 @@ import { ActivatedRoute } from "@angular/router";
 export class PlaygroundComponent implements OnInit {
 
     myInputValue: string = "test-value";
+    allowEdit: boolean = false;
 
     constructor(private activatedRoute: ActivatedRoute)
     {}
 
     ngOnInit(): void {
         const queryParams = this.activatedRoute.snapshot.queryParams;
-        console.log(queryParams);
+        const data = this.activatedRoute.snapshot.data;
+        
+        this.allowEdit = data["allowEdit"];
+
+        //console.log(queryParams);
+        console.log(data);
         
     }
 
