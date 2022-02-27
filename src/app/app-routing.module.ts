@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { AdminComponent } from "./admin/admin.component";
+import { RoleComponent } from "./admin/roles/role.component";
 import { UserPreviewComponent } from "./admin/users/preview/user-preview.component";
 import { ContactComponent } from "./contact/contact.component";
 import { PlaygroundDetailComponent } from "./playground-detail/playground-detail.component";
@@ -40,7 +41,8 @@ const routes: Routes = [
         canActivate: [],
         canActivateChild: [],
         children: [
-            { path: 'users', component: UserPreviewComponent }
+            { path: 'users', component: UserPreviewComponent },
+            { path: 'roles', component: RoleComponent}
         ]
     },
     {
