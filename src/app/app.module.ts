@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AdminComponent } from './admin/admin.component';
@@ -18,6 +18,9 @@ import { StudentDetailComponent } from './student/detail/student-detail.componen
 import { StudentListComponent } from './student/list/student-list.component';
 import { StudentComponent } from './student/student.component';
 import { RoleComponent } from './admin/roles/role.component';
+import { LoginComponent } from './login/login.component';
+import { JwtInterceptor } from './auth/interceptors/jwt.interceptor';
+import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { RoleComponent } from './admin/roles/role.component';
     AboutUsComponent,
     AdminComponent, 
     UserPreviewComponent, 
-    RoleComponent
+    RoleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,11 @@ import { RoleComponent } from './admin/roles/role.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [StudentService],
+  providers: [
+    StudentService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
