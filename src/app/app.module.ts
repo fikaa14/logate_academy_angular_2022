@@ -21,6 +21,7 @@ import { RoleComponent } from './admin/roles/role.component';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './auth/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
     AdminComponent, 
     UserPreviewComponent, 
     RoleComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

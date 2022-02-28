@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, tap } from "rxjs";
 import { environment } from "src/environments/environment";
 import { JwtToken } from "../models/jwt.model";
 import { Login } from "../models/login.model";
+import { Register } from "../models/register.model";
 
 @Injectable({ providedIn: 'root'})
 export class AuthService {
@@ -20,6 +21,12 @@ export class AuthService {
                 localStorage.setItem('academy-token', token);
                 this.isAuthenticated.next(true);
             }));
+    }
+
+    register(registerData: Register): Observable<any> {
+
+        const url = `${environment.apiUrl}authenticate/register`;
+        return this.httpClient.post<Register>(url, registerData);
     }
 
     logout(): void { 
