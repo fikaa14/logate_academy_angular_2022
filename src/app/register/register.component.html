@@ -33,12 +33,24 @@
                     </span>
                 </p>
             </div>
-            <div class="field">
-                <p class="control">
-                    <button class="button is-primary">
-                    Sign up
-                </button>
-                </p>
+            <div class="columns">
+                <div class="column">
+                    <div class="select is-multiple field">
+                        <select multiple size="4" name="roles" ngModel>
+                            <!-- OVO KUPI SAMO STRING A U BEKU PRIMAM OBJEKAT ROLE -->
+                          <option *ngFor="let role of roles">{{ role.name.substring(5) }} </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-primary">
+                                Sign up
+                            </button>
+                        </p>
+                    </div>
+                </div>
             </div>
         </form>
     </div>

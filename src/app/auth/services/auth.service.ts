@@ -23,10 +23,12 @@ export class AuthService {
             }));
     }
 
-    register(registerData: Register): Observable<any> {
-
+    register(registerData: Register): Observable<void> {
+        console.log(registerData);
         const url = `${environment.apiUrl}authenticate/register`;
-        return this.httpClient.post<Register>(url, registerData);
+        console.log(url);
+        
+        return this.httpClient.post<void>(url, registerData);
     }
 
     logout(): void { 
