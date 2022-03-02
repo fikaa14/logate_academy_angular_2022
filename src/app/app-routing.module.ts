@@ -12,6 +12,7 @@ import { PlaygroundDetailComponent } from "./playground-detail/playground-detail
 import { PlaygroundDetailResolver } from "./playground-detail/playground-detail.resolver";
 import { PlaygroundComponent } from "./playground/playground.component";
 import { PlaygroundGuard } from "./playground/playground.gurad";
+import { RegisterComponent } from "./register/register.component";
 import { StudentComponent } from "./student/student.component";
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
     {
         path: 'about-us',
         component: AboutUsComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
     },
     {
         path: 'admin',
