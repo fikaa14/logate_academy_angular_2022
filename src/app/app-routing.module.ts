@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { AdminComponent } from "./admin/admin.component";
 import { RoleComponent } from "./admin/roles/role.component";
+import { UserCreateComponent } from "./admin/users/create/user-create.component";
 import { UserPreviewComponent } from "./admin/users/preview/user-preview.component";
 import { isAllreadyAuthenticatedGuard } from "./auth/guards/is-already-authenticated.guard";
 import { IsAuthenticatedGuard } from "./auth/guards/is-authenticated.guard";
@@ -55,7 +56,8 @@ const routes: Routes = [
         canActivateChild: [],
         children: [
             { path: 'users', component: UserPreviewComponent },
-            { path: 'roles', component: RoleComponent}
+            { path: 'roles', component: RoleComponent},
+            { path: 'users/create', component: UserCreateComponent}
         ]
     },
     {

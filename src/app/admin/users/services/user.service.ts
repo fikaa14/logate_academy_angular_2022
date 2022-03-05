@@ -17,4 +17,9 @@ export class UserService {
         const url = `${environment.apiUrl}user/${id}`;
         return this.httpClient.delete(url);
     }
+
+    existsByUsername(username: string): Observable<{status: boolean}> {
+        const url = `${environment.apiUrl}user/exists/by-username/${username}`;
+        return this.httpClient.get<{status: boolean}>(url);
+    }
 }

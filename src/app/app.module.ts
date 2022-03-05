@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './auth/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
 import { RegisterComponent } from './register/register.component';
+import { UserCreateComponent } from './admin/users/create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import { RegisterComponent } from './register/register.component';
     UserPreviewComponent, 
     RoleComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     StudentService,
