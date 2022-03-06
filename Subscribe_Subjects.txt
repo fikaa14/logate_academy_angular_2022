@@ -1,0 +1,21 @@
+Publishovanje podataka
+-> Observable ne publishuje nista dok se ne pojavi makar jedna subskrajber, kada se neko 
+subskrajbuje na observable object onda on publishuje. Ako postoje dva subskrajbera onda
+on kopira podatke i prosljedjuje ih subskrajberima, subskrajber dobija sve podatke koje
+je observable publishovao
+-> Subject ne trazi da postoje subskrajberi, publishuje i kada nema nikoga, subskrajber
+dobija samo poslednje dodate podatke
+-> BehaviorSubject mora imati inicijalnu vrijednost u sebi, on publishuje novom
+subskrajberu samo jedan prethodni podatak i nove vrijednosti
+-> ReplaySubject ima bafer gdje cuva stare vrijednosti, i svi subskrajberi dobijaju i
+nove i stare podatke
+-> AsyncSubject publishuje poslednju vrijednost tek kad se raskaci konekcija sa subjectom
+
+
+RxJS operatori
+# .pipe() -> iteracijom prolazimo kroz objekat
+# map(item => item.name) -> dobijamo odredjeni podatak(item) ali te podatke transformisemo
+i serviramo samo ono sto je potrebno(item.name)
+# tap(item => item.name) -> dobijamo odredjeni podatak(item) ali se ne moze transformisat
+u drugacije podatke
+# concat => spaja podatke u jedan podatak

@@ -23,6 +23,10 @@ import { JwtInterceptor } from './auth/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
 import { RegisterComponent } from './register/register.component';
 import { UserCreateComponent } from './admin/users/create/user-create.component';
+import { ProductComponent } from './product/product.component';
+import { CommonModule } from '@angular/common';
+import { CustomPipe } from './shared/custom.pipes';
+import { CustomDirective } from './shared/custom.directive';
 
 @NgModule({
   declarations: [
@@ -41,10 +45,14 @@ import { UserCreateComponent } from './admin/users/create/user-create.component'
     RoleComponent,
     LoginComponent,
     RegisterComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    ProductComponent,
+    CustomPipe,
+    CustomDirective
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,

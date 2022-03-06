@@ -40,16 +40,32 @@
             </div>
 
             <div class=" field ">
-                <label class="label ">Password</label>
-                <div class="control ">
-                    <input class="input " type="password " formControlName="password " placeholder="Type password... ">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input " type="password " formControlName="password" placeholder="Type password... ">
+
+                    <!-- Required validator -->
+                    <p class="help is-danger" *ngIf="userCreateForm.controls['password'].touched && userCreateForm.controls['password'].errors?.['required']">Password is required!</p>
+
+                    <!-- Min length -->
+                    <p class="help is-danger" *ngIf="userCreateForm.controls['password'].touched && userCreateForm.controls['password'].errors?.['minlength']">Password must be over 8 charachters!</p>
+
+                    <!-- Uppercase letter -->
+                    <p class="help is-danger" *ngIf="userCreateForm.controls['password'].touched && !userCreateForm.controls['password'].errors?.['containsUpperLetter']">Password must contain at least one uppercase letter!</p>
+
+                    <!-- Numeric charachter -->
+                    <p class="help is-danger" *ngIf="userCreateForm.controls['password'].touched && !userCreateForm.controls['password'].errors?.['containsNumber']">Password must contain at least one number!</p>
+
+                    <!-- Special charachter -->
+                    <p class="help is-danger" *ngIf="userCreateForm.controls['password'].touched && !userCreateForm.controls['password'].errors?.['containsSpecialCharachter']">Password must contain at least one special charachter!</p>
+
                 </div>
             </div>
             <div class="field ">
                 <label class="label ">Roles</label>
                 <div class="control ">
                     <div class="select is-multiple ">
-                        <select multiple formControlName="roles ">
+                        <select multiple formControlName="roles">
                             <option [value]="role " *ngFor="let role of roles ">{{ role.name }}</option>
                         </select>
                     </div>

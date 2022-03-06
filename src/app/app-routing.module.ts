@@ -13,6 +13,7 @@ import { PlaygroundDetailComponent } from "./playground-detail/playground-detail
 import { PlaygroundDetailResolver } from "./playground-detail/playground-detail.resolver";
 import { PlaygroundComponent } from "./playground/playground.component";
 import { PlaygroundGuard } from "./playground/playground.gurad";
+import { ProductComponent } from "./product/product.component";
 import { RegisterComponent } from "./register/register.component";
 import { StudentComponent } from "./student/student.component";
 
@@ -48,6 +49,10 @@ const routes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path: 'products',
+        component: ProductComponent
     },
     {
         path: 'admin',
