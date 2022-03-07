@@ -1,6 +1,6 @@
 <div class="mt-5">
     <form>
-        <div class="field" [formGroup]="productSearchFrom">
+        <div class="field" [formGroup]="productSearchForm">
             <div class="control has-icons-left">
                 <input class="input" type="text" formControlName="searchTerm" placeholder="Find products">
                 <span class="icon is-small is-left">
@@ -12,8 +12,8 @@
     </form>
 </div>
 
-<div class="columns">
-    <div class="column" *ngFor="let product of products">
+<div class="columns is-multiline">
+    <div class="column is-one-quarter" *ngFor="let product of products">
         <div class="card">
             <div class="card-content">
                 <div class="media">
@@ -29,3 +29,5 @@
         </div>
     </div>
 </div>
+
+<button type="button" class="button is-primary" (click)="loadMore()" [disabled]="enableButton">Load more...</button>
