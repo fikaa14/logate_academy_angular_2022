@@ -1,0 +1,20 @@
+<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+    <thead>
+        <th>ID </th>
+        <th>Name</th>
+        <th>Path</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let document of documents">
+            <td>{{ document.id }}</td>
+            <td>{{ document.name }}</td>
+            <td>{{ document.path }}</td>
+            <td>
+                <span class="icon pointer" (click)="downloadFile(document.id)">
+                    <i class="fas fa-download"></i>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

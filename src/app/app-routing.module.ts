@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { AdminComponent } from "./admin/admin.component";
+import { DocumentNewComponent } from "./admin/document/new/document-new.component";
+import { DocumentPreviewComponent } from "./admin/document/preview/document-preview.component";
 import { RoleComponent } from "./admin/roles/role.component";
 import { UserCreateComponent } from "./admin/users/create/user-create.component";
 import { UserPreviewComponent } from "./admin/users/preview/user-preview.component";
@@ -61,8 +63,10 @@ const routes: Routes = [
         canActivateChild: [],
         children: [
             { path: 'users', component: UserPreviewComponent },
-            { path: 'roles', component: RoleComponent},
-            { path: 'users/create', component: UserCreateComponent}
+            { path: 'roles', component: RoleComponent },
+            { path: 'users/create', component: UserCreateComponent },
+            { path: 'documents/new', component: DocumentNewComponent },
+            { path: 'documents/preview', component: DocumentPreviewComponent}
         ]
     },
     {

@@ -27,6 +27,8 @@ import { ProductComponent } from './product/product.component';
 import { CommonModule } from '@angular/common';
 import { CustomPipe } from './shared/custom.pipes';
 import { CustomDirective } from './shared/custom.directive';
+import { DocumentNewComponent } from './admin/document/new/document-new.component';
+import { DocumentPreviewComponent } from './admin/document/preview/document-preview.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { CustomDirective } from './shared/custom.directive';
     UserCreateComponent,
     ProductComponent,
     CustomPipe,
-    CustomDirective
+    CustomDirective,
+    DocumentNewComponent,
+    DocumentPreviewComponent
   ],
   imports: [
     BrowserModule,
